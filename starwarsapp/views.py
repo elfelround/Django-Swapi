@@ -11,6 +11,12 @@ def testView(request):
 def test_view(request):
     return render(request, "starwarsapp/test.html")
 
+def navbar(request):
+    return render(request, "starwarsapp/navbartest.html")
+
+def carrusel(request):
+    return render(request, "starwarsapp/carrusel.html")
+
 class PeopleListView(ListView):
     queryset = People.objects.all()
     template_name = 'starwarsapp/people/list.html'
