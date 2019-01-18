@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -9,7 +10,45 @@
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css'>
 
-      <link rel="stylesheet" href="css/style.css">
+      <style>
+          .carousel-wrap {
+  margin: 90px auto;
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+}
+
+.item {
+	border: 1px solid #CCC;
+}
+
+/* end fix */
+.owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
+}
+
+.owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+      </style>
 
 
 </head>
@@ -18,9 +57,16 @@
 
   <div class="carousel-wrap">
   <div class="owl-carousel">
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
+    <div class="item"><img src="https://raw.githubusercontent.com/Thinkful-Ed/star-wars-responsive-challenge-starter-files/master/images/rey_square.png" alt="Image of Rey">
+						<h3>Ray</h3>
+                        <p class="caption">Protagonist, from Tatooine</p>
+    </div>
+    <div class="item"><img src="https://raw.githubusercontent.com/Thinkful-Ed/star-wars-responsive-challenge-starter-files/master/images/finn_square.png" alt="Image of Finn">
+						<h3>Finn</h3>
+						<p class="caption">Storm Trooper, befriends Ray</p></div>
+    <div class="item"><img src="https://raw.githubusercontent.com/Thinkful-Ed/star-wars-responsive-challenge-starter-files/master/images/kylo_square.png" alt="Image of Kylo">
+						<h3>Kylo</h3>
+						<p class="caption">Main villan, or is he?</p></div>
     <div class="item"><img src="http://placehold.it/150x150"></div>
     <div class="item"><img src="http://placehold.it/150x150"></div>
     <div class="item"><img src="http://placehold.it/150x150"></div>
@@ -38,7 +84,29 @@
 
 
 
-    <script  src="js/index.js"></script>
+  <script> $('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa fa-caret-left'></i>",
+    "<i class='fa fa-caret-right'></i>"
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+})
+  </script>
 
 
 
