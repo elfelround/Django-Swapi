@@ -10,45 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
-          .carousel-wrap {
-  margin: 90px auto;
-  padding: 0 5%;
-  width: 80%;
-  position: relative;
-}
-
-/* fix blank or flashing items on carousel */
-.owl-carousel .item {
-  position: relative;
-  z-index: 100;
-  -webkit-backface-visibility: hidden;
-}
-
-.item {
-	border: 1px solid #CCC;
-}
-
-/* end fix */
-.owl-nav > div {
-  margin-top: -26px;
-  position: absolute;
-  top: 50%;
-  color: #cdcbcd;
-}
-
-.owl-nav i {
-  font-size: 52px;
-}
-
-.owl-nav .owl-prev {
-  left: -30px;
-}
-
-.owl-nav .owl-next {
-  right: -30px;
-}
-      </style>
+  {% block styles %}{% endblock %}
 </head>
 <body>
 
@@ -58,9 +20,43 @@
       <a class="navbar-brand" href="#">Star Wars</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li class="active"><a href="{% url 'home' %}">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+           role="button" aria-haspopup="true" aria-expanded="false">Films <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'film-create' %}">Create</a></li>
+          <li><a href="#">List</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Delete</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+           role="button" aria-haspopup="true" aria-expanded="false">People <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'film-create' %}">Create</a></li>
+          <li><a href="#">List</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Delete</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+           role="button" aria-haspopup="true" aria-expanded="false">Vehicle <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'film-create' %}">Create</a></li>
+          <li><a href="#">List</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Delete</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Admin</a></li>
+
     </ul>
     <form class="navbar-form navbar-right" action="/action_page.php">
       <div class="input-group">
@@ -79,6 +75,24 @@
     {% block content %}
     {% endblock %}
   </div>
+
+<form id="search-form" class="form-horizontal" method="GET" action="/results/" role="form">
+    <input type="text" class="form-control" id="query" name="query">
+
+    <button type="submit"  form="search-form" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $("button").click(function (e) {
+            e.preventDefault();
+            query = $("#query").val();
+            window.location.href = "https://swapi.co/api/people/?search=" + query;
+        });
+    });
+</script>
 
 </body>
 </html>

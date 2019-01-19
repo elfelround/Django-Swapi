@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from starwarsapp.views import testView, PeopleListView, test_view, navbar, carrusel
+from starwarsapp.views import testView, PeopleListView, test_view, navbar, carrusel, FilmCreateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     path('people/', PeopleListView),
     path('test/', test_view),
     path('navbar/', navbar),
-    path('', carrusel),
+    path('create_film/', FilmCreateView.as_view(), name='film-create'),
+    path('', carrusel, name='home'),
 ]

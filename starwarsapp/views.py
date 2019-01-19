@@ -1,9 +1,29 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Film
-from django.views.generic import ListView
 from django.http import HttpResponse
 from .models import People
-from django.shortcuts import render
+
+from django.views.generic import (
+    ListView,
+    CreateView
+)
+
+from .forms import FilmModelForm, SearchForm
+from .models import Film
+
+class FilmCreateView(CreateView):
+    template_name = "starwarsapp/film/create.html"
+    form_class = FilmModelForm
+    queryset = Film.objects.all()
+
+def my_view(request):
+    search_form = SearchForm(request.POST or None, initial={'name': 'R2'})
+
+    if request.method == 'POST':
+        if search_form.is_valid():
+           urlquery = 'https://swapi.co/api/people/?search='
+
+    return render(request, 'search-form.html', {'search_form': search_form})
+
 
 def testView(request):
     return HttpResponse('Star Wars')

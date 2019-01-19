@@ -10,6 +10,7 @@ class DateTimeModel(models.Model):
     """ A base model with created and edited datetime fields """
 
     created = models.DateTimeField(auto_now_add=True)
+    # auto_now_add renders the field un-editable in the admin, somehow db asks default
     edited = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -36,7 +37,7 @@ class Planet(DateTimeModel):
 class People(DateTimeModel):
     """ A person i.e. - Luke Skywalker """
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, default=None)
     height = models.CharField(max_length=10, blank=True)
     mass = models.CharField(max_length=10, blank=True)
     hair_color = models.CharField(max_length=20, blank=True)
@@ -44,7 +45,7 @@ class People(DateTimeModel):
     eye_color = models.CharField(max_length=20, blank=True)
     birth_year = models.CharField(max_length=10, blank=True)
     gender = models.CharField(max_length=40, blank=True)
-    homeworld = models.ForeignKey(Planet, related_name="residents", on_delete=models.CASCADE)
+    homeworld = models.ForeignKey(Planet, related_name="residents", blank=True, null=True, on_delete=models.CASCADE)
 
     def __unicode__(self):
         return self.name
@@ -152,3 +153,8 @@ class Film(DateTimeModel):
 class Hero(DateTimeModel):
     name = models.CharField(max_length=100)
     homeworld = models.ForeignKey(Planet, related_name="heroes", on_delete=models.CASCADE)
+
+
+class PropertyImage(models.Model):
+    property = models.ForeignKey(People, null=True, blank=True, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField()

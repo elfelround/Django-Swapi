@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08761164-7d08-4dbe-9ed6-ff6c594f47d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/navbartest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetcher/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetcher/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwars/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/starwars/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starwars/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/starwars/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwarsapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwarsapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwarsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwarsapp/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/static/starwarsapp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwarsapp/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/static/starwarsapp/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/carrusel.html" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/carrusel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starwarsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,21 +25,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starwars/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="420">
+              <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
               <folding>
                 <element signature="e#632#664#0" expanded="true" />
               </folding>
@@ -39,10 +39,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/navbartest.html">
+        <entry file="file://$PROJECT_DIR$/starwarsapp/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starwarsapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="330">
+              <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -60,19 +63,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/starwarsapp/templates/search_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/carrusel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            <state relative-caret-position="397">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="48" column="75" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html">
+        <entry file="file://$PROJECT_DIR$/fetcher/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+            <state relative-caret-position="405">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/starwarsapp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2370">
+              <caret line="158" column="20" lean-forward="true" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
+              <folding>
+                <element signature="e#157#196#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,26 +129,32 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/starwarsapp/admin.py" />
-        <option value="$PROJECT_DIR$/starwarsapp/models.py" />
-        <option value="$PROJECT_DIR$/fetcher/views.py" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/film/list.html" />
         <option value="$PROJECT_DIR$/starwarsapp/urls.py" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/people/list.html" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test.html" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/navbartest.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/starwarsapp/models.py" />
+        <option value="$PROJECT_DIR$/starwarsapp/admin.py" />
+        <option value="$PROJECT_DIR$/starwars/settings.py" />
+        <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/forms.py" />
+        <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/film/create.html" />
+        <option value="$PROJECT_DIR$/starwars/urls.py" />
+        <option value="$PROJECT_DIR$/starwarsapp/forms.py" />
+        <option value="$PROJECT_DIR$/starwarsapp/templates/search_form.html" />
         <option value="$PROJECT_DIR$/starwarsapp/views.py" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/carrusel.html" />
-        <option value="$PROJECT_DIR$/starwars/urls.py" />
         <option value="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html" />
+        <option value="$PROJECT_DIR$/fetcher/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="431" />
-    <option name="y" value="36" />
-    <option name="width" value="1400" />
+    <option name="x" value="451" />
+    <option name="y" value="80" />
+    <option name="width" value="1273" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -121,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,11 +173,35 @@
             <path>
               <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
               <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="fetcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="fetcher" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starwars" type="462c0819:PsiDirectoryNode" />
               <item name="starwars" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
               <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -151,11 +216,20 @@
               <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
+              <item name="starwars" type="462c0819:PsiDirectoryNode" />
+              <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="starwarsapp" type="462c0819:PsiDirectoryNode" />
+              <item name="film" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,6 +240,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/starwarsapp" />
+      <recent name="$PROJECT_DIR$/starwarsapp/static/starwarsapp" />
       <recent name="$PROJECT_DIR$/starwarsapp/templates/starwarsapp" />
     </key>
   </component>
@@ -195,11 +270,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="431" y="36" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="451" y="80" width="1273" height="1000" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24981844" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2752" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3306544" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -218,9 +292,9 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24981844" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24981844" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3306544" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3306544" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -237,26 +311,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/starwarsapp/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fetcher/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../.local/share/virtualenvs/starwars-VeoYEC5s/lib/python3.6/site-packages/django/urls/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -281,90 +335,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starwarsapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2017">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
-          <folding>
-            <element signature="e#157#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test" />
     <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/people/list.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/fetcher/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/starwars/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starwarsapp/static/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starwarsapp/static/style.css">
+    <entry file="file://$PROJECT_DIR$/starwars/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/navbartest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starwars/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starwarsapp/views.py">
+    <entry file="file://$PROJECT_DIR$/starwarsapp/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="426">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#405#444#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/carrusel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+    <entry file="file://$PROJECT_DIR$/starwarsapp/static/starwarsapp/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/static/starwarsapp/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/film/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starwars/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fetcher/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/starwars/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="420">
+          <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
           <folding>
             <element signature="e#632#664#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/templates/search_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/carrusel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="158" column="20" lean-forward="true" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
+          <folding>
+            <element signature="e#157#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starwarsapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+        <state relative-caret-position="171">
+          <caret line="48" column="75" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fetcher/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
