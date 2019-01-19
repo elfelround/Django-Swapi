@@ -58,18 +58,38 @@
       <li><a href="#">Admin</a></li>
 
     </ul>
-    <form class="navbar-form navbar-right" action="/action_page.php">
+
+    <form id="search-navbar-form" class="navbar-form navbar-right">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
+        <input type="text" class="form-control" placeholder="Search" name="search-query">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
+          <button class="btn btn-default" type="button">
             <i class="glyphicon glyphicon-search"></i>
           </button>
         </div>
       </div>
     </form>
+
+
   </div>
 </nav>
+
+
+
+  <div class="container" style="width:900px;">
+   <h2 align="center">STAR WARS live data search</h2>
+   <h3 align="center">Franchise Data</h3>
+   <br /><br />
+   <div align="center">
+    <input type="text" name="search" id="search" placeholder="Search Star Wars Details" class="form-control" />
+   </div>
+   <ul class="list-group" id="result"></ul>
+   <br />
+  </div>
+
+
+
+
 
   <div id="content">
     {% block content %}
@@ -77,22 +97,76 @@
   </div>
 
 <form id="search-form" class="form-horizontal" method="GET" action="/results/" role="form">
-    <input type="text" class="form-control" id="query" name="query">
+    <input type="text" class="form-control" id="query" name="query" placeholder="Make an External Search instead">
 
-    <button type="submit"  form="search-form" class="btn btn-primary">
+    <button id="test-button" type="submit"  form="search-form" class="btn btn-primary">
         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
     </button>
 </form>
 
 <script>
+////////////////////////////
     $(document).ready(function () {
-        $("button").click(function (e) {
+        $("#test-button").click(function (e) {
             e.preventDefault();
             query = $("#query").val();
             window.location.href = "https://swapi.co/api/people/?search=" + query;
         });
+
+
+///////////////////////////
+var xhr = new XMLHttpRequest();
+
+
+    $("#search-navbar-form").submit(function(e) {
+
+    val query = $("#search-query").val();
+    var form = $(this);
+    var url = "https://swapi.co/api/people/?search=" + query;
+
+    $.ajaxForm({
+           type: "GET",
+           url: url,
+           data: form.serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               alert(data); // show response from the php script.
+           }
+         });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
     });
+
+
 </script>
+
+<script>
+$(document).ready(function(){
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+  $.getJSON('{% static "data.json" %}', function(data) {
+   $.each(data, function(key, value){
+    if (value.name.search(expression) != -1 || value.location.search(expression) != -1)
+    {
+     $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.name+' | <span class="text-muted">'+value.location+'</span></li>');
+    }
+   });
+  });
+ });
+
+ $('#result').on('click', 'li', function() {
+  var click_text = $(this).text().split('|');
+  $('#search').val($.trim(click_text[0]));
+  $("#result").html('');
+ });
+});
+</script>
+
 
 </body>
 </html>

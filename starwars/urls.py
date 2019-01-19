@@ -20,12 +20,10 @@ from starwarsapp.views import testView, PeopleListView, test_view, navbar, carru
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-#    path('film/', include('starwarsapp.urls',
-#                          namespace='film',
-#                          )),
     path('people/', PeopleListView),
     path('test/', test_view),
     path('navbar/', navbar),
     path('create_film/', FilmCreateView.as_view(), name='film-create'),
+#    path('search/', search_view, name='search'),
     path('', carrusel, name='home'),
 ]

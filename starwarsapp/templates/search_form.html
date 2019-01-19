@@ -1,9 +1,12 @@
 {% extends "starwarsapp/base.html" %}
 {% load static %}
 
+{% block search %}
 <form action="." method="post" enctype="application/x-www-form-urlencoded">
     {{ search_form.name.label_tag }}
     {{ search_form.name }}
     {{ search_form.name.errors }}
     <button type="submit">Submit</button>
 </form>
+
+{% endblock %}

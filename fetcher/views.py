@@ -19,13 +19,14 @@ import json
 from django.shortcuts import render
 import requests
 
-def home(request):
+def search_view(request):
     if request.method == 'POST':
-        response = requests.get('https://swapi.co/api/people/?search=' + request.POST)
-        searchdata = response.json()
-        return render(request, 'core/home.html', {
-            'ip': searchdata['ip'],
-            'country': geodata['country_name']
+        response = requests.get('https://swapi.co/api/people/?search=r2' #+ request.POST.searchvalue
+        )
+        searchresponse = response.json()
+        return render(request, 'fetcher/search.html', {
+            'name': searchresponse['name'],
+            'height': searchresponse['height']
         })
 
 
