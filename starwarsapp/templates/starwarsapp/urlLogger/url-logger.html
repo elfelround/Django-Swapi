@@ -1,0 +1,30 @@
+{% load static %}
+
+<link rel='stylesheet' href='{% static "starwarsapp/urlLogger/style.css" %}'>
+
+
+<div class="wrapper">
+	<div class="container">
+		<h1>URL Log</h1>
+
+		<ul id="list" class="urlTabloid">
+			<button type="submit" id="login-button">Return</button>
+			  <button onclick="resetCookie('urls')">CLEAR URLS</button>
+		</ul>
+	</div>
+
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="{% static "starwarsapp/urlLogger/index.js" %}"></script>

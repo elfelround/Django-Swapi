@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from starwarsapp.views import testView, PeopleListView, test_view, navbar, carrusel, FilmCreateView
+from fetcher.views import *
 
 
 urlpatterns = [
@@ -24,6 +25,6 @@ urlpatterns = [
     path('test/', test_view),
     path('navbar/', navbar),
     path('create_film/', FilmCreateView.as_view(), name='film-create'),
-#    path('search/', search_view, name='search'),
+    path('search/', get_data, name='search'),
     path('', carrusel, name='home'),
 ]

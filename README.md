@@ -15,4 +15,4 @@ su: erick 1234
 
 whereami?
 
-adding stuff to admin panel, to install pillow & whitenoise
+Ver la lista de páginas que ha visitado anteriormente

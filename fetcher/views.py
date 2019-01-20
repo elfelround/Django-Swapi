@@ -33,11 +33,11 @@ def search_view(request):
 
 
 def get_data(request):
-    #serialized_data = urllib2.urlopen(url).read()
-    r = requests.get(‘https://swapi.co/api/people/?search=’ + request.POST)
-    data = json.loads(serialized_data)
+    r = requests.get("https://swapi.co/api/people/?search=r2" #+ request.POST
+    )
+    answer = r.text
 
-    html = "<html><body><pre>Data: %s.</pre></body></html>" % json.dumps(data, indent=2)
+    html = "<html><body><p style=\"width:50vw;\">" + answer + "</p></body></html>"
 
     return HttpResponse(html)
 
@@ -46,6 +46,8 @@ All resources support a search parameter that filters the set of resources retur
 This allows you to make queries like:
 
 https://swapi.co/api/people/?search=r2
+
+https://swapi.co/api/films/
 
 All searches will use case-insensitive partial matches on the set of search
 if fields:
