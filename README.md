@@ -1,6 +1,7 @@
 ##On development, end-date next monday
 
 ![Star Wars](https://i.ytimg.com/vi/usO_6-RuCrg/maxresdefault.jpg)
+![Star Wars Site](https://github.com/elfelround/Django-Swapi/screenshot.png)
 
 $ pip install pipenv
 $ pipenv shell
