@@ -11,7 +11,7 @@ django = "*"
 pytz = "*"
 swapi = "*"
 pillow = "*"
-urllib2 = "*"
+requests = "==2.20.2"
 
 [requires]
 python_version = "3.6"

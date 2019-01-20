@@ -1,7 +1,6 @@
 ##On development, end-date next monday
 
-![Star Wars](https://i.ytimg.com/vi/usO_6-RuCrg/maxresdefault.jpg)
-![Star Wars Site](https://github.com/elfelround/Django-Swapi/screenshot.png)
+![Star Wars Site](https://github.com/elfelround/Django-Swapi/blob/master/screenshot.png)
 
 $ pip install pipenv
 $ pipenv shell
@@ -55,4 +54,5 @@ Comentar a CEO la posibiildad de informar de la incidencia al cliente.
 
 Protocolo Http Http 2.0 Seguridad OAuth Xss->Csp Csrf Cors-->http verb OPTIONS basic HTTP y Bearer Token Authentication Http-Only MITM JavaScript Prototype Pattern ES6 Transpiler Node.js Frameworks Backend docker microservices Orm DDD->Eric Evancs Event Sourcing CQRS Css BEM Flexbox Custom css properties Html webcomponents Cultura Informatica Repositorio Github Último libro que te has leido Tus aportaciones al Open Source Donde buscas y te documentas Principios Solid Testing Pattern's Otros Mobile PWA
 
+![Star Wars](https://i.ytimg.com/vi/usO_6-RuCrg/maxresdefault.jpg)
 
