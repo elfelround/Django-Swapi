@@ -49,13 +49,8 @@ class FilmDelete(DeleteView):
     template_name = 'starwarsapp/film/delete.html'
 
     def get_success_url(self):
+        return reverse_lazy('film-list')
         # Assuming there is a ForeignKey from Comment to Post in your model
-
-        return reverse_lazy('film_delete', kwargs={'id': self.object.id})
-
-    def get_object(self):
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(Film, id=id_)
 
 
 def my_view(request):

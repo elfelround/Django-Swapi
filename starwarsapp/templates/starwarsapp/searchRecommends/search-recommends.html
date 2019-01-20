@@ -26,7 +26,9 @@ $(document).ready(function() {
         $.getJSON('{% static "data.json" %}', function(data) {
             $.each(data, function(key, value) {
                 if (value.name.search(expression) != -1 || value.location.search(expression) != -1) {
-                    $('#result').append('<li class="list-group-item link-class"><img src="' + value.image + '" height="40" width="40" class="img-thumbnail" /> ' + value.name + ' | <span class="text-muted">' + value.location + '</span></li>');
+                    $('#result').append('<li class="list-group-item link-class"><img src="' + value.image + '"
+                    height="40" width="40" class="img-thumbnail" /> ' + value.name + ' | <span class="text-muted">'
+                    + value.location + '</span></li>');
                 }
             });
         });
@@ -39,7 +41,3 @@ $(document).ready(function() {
     });
 });
 </script>
-
-
-{% comment %}above code shall be refractored on below file, but passing .json to it is required{% endcomment %}
-<link rel='stylesheet' href='{% static "starwarsapp/searchRecommends/index.js" %}'>

@@ -61,9 +61,9 @@
 
     <form id="search-navbar-form" class="navbar-form navbar-right">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="EXTERNAL Search" name="search-query">
+        <input type="text" class="form-control" placeholder="EXTERNAL Search" id="search-query" name="search-query">
         <div class="input-group-btn">
-          <button id="navbar-search-btn" class="btn btn-default" type="button">
+          <button id="navbar-search-btn" class="btn btn-default" type="button" onclick="externalsearch()">
             <i class="glyphicon glyphicon-search"></i>
           </button>
         </div>
@@ -85,6 +85,7 @@
 
 
 <script type="text/javascript" src="{% static "starwarsapp/navbar/externalSearch/index.js" %}"></script>
+
 {% include "starwarsapp/urlLogger/url-logger.html" %}
 
 <style>

@@ -9,7 +9,8 @@
 <ul>
 {% for film in films %}
     <li>{{ film.release_date|date }} - {{ film.title }}
-        <a href ="{% url 'film-delete' film.id %}" class="button" style="color:#999999">DELETE</a>
+        <a href ="{% url 'film-delete' pk=film.id %}" class="button" style="color:#999999">DELETE</a>
+        <a href ="{% url 'film-update' pk=film.id %}" class="button" style="color:#999999">EDIT</a>
     </li>
 {% empty %}
     <li>No articles yet.</li>
