@@ -3,6 +3,9 @@
 # https://github.com/phalt/swapi/blob/master/resources/models.py
 from __future__ import unicode_literals
 
+from django.urls import reverse
+
+
 from django.db import models
 
 

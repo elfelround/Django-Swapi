@@ -27,9 +27,9 @@
            role="button" aria-haspopup="true" aria-expanded="false">Films <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="{% url 'film-create' %}">Create</a></li>
-          <li><a href="#">List</a></li>
+          <li><a href="{% url 'film-list' %}">List</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Delete</a></li>
+          <li><a href="#">X</a></li>
         </ul>
       </li>
 
@@ -83,40 +83,14 @@
     {% endblock %}
   </div>
 
-<script>
-//////////////
-$(document).ready(function() {
-
-    var xhr = new XMLHttpRequest(); //wanted to implement but not yet used
+{% static "starwarsapp/navbar/externalSearch/index.js" %}
 
 
-    $("#search-search-btn").click(function(e) {
-
-        e.preventDefault();
-
-
-        val query = $("#search-query").val();
-        var form = $(this);
-        var url = "https://swapi.co/api/people/?search=" + query;
-
-        $.get({
-            type: "GET",
-            url: url,
-            // data: form.serialize(),
-            success: function(data) {
-                alert(data); // show response from the php script.
-            }
-        });
-
-        e.preventDefault(); // avoid to execute the actual submit of the form.
-    });
-});
-
-
-</script>
-
+<script type="text/javascript" src="{% static "starwarsapp/navbar/externalSearch/index.js" %}"></script>
 {% include "starwarsapp/urlLogger/url-logger.html" %}
 
-
+<style>
+    p {color: black;}
+</style>
 </body>
 </html>

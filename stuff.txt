@@ -1,0 +1,12 @@
+
+  {% for list in lists %}
+    <h2>
+      <a href="{{ list.get_absolute_url }}">
+        {{ list.title }}
+      </a>
+    </h2>
+    <p class="date">
+      Published {{ post.publish }} by {{ post.author }}
+    </p>
+    {{ post.body|truncatewords:30|linebreaks }}
+  {% endfor %}

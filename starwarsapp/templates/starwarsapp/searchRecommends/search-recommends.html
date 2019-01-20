@@ -3,8 +3,8 @@
 <link rel='stylesheet' href='{% static "starwarsapp/searchRecommends/style.css" %}'>
 
   <div class="container" style="width:900px;">
-   <h2 align="center">STAR WARS live data search</h2>
-   <h3 align="center">Film Data</h3>
+   <h2 align="center" class="autocomplete-searchbar-title">STAR WARS live data search</h2>
+   <h3 align="center" class="autocomplete-searchbar-title">Film Data</h3>
    <br /><br />
    <div align="center">
     <input type="text" name="search" id="search" placeholder="Search Star Wars Films" class="form-control" />
@@ -41,5 +41,5 @@ $(document).ready(function() {
 </script>
 
 
-//above code shall be refractored on below file, but passing .json to it is required
+{% comment %}above code shall be refractored on below file, but passing .json to it is required{% endcomment %}
 <link rel='stylesheet' href='{% static "starwarsapp/searchRecommends/index.js" %}'>

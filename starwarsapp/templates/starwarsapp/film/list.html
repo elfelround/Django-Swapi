@@ -1,18 +1,19 @@
-{% extends "blog/base.html" %}
+{% extends "starwarsapp/base.html" %}
 
 {% block title %}My Blog{% endblock %}
 
 {% block content %}
   <h1>Film List</h1>
-  {% for list in lists %}
-    <h2>
-      <a href="{{ list.get_absolute_url }}">
-        {{ list.title }}
-      </a>
-    </h2>
-    <p class="date">
-      Published {{ post.publish }} by {{ post.author }}
-    </p>
-    {{ post.body|truncatewords:30|linebreaks }}
-  {% endfor %}
+
+<h1>Articles</h1>
+<ul>
+{% for film in films %}
+    <li>{{ film.release_date|date }} - {{ film.title }}
+        <a href ="{% url 'film-delete' film.id %}" class="button" style="color:#999999">DELETE</a>
+    </li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
 {% endblock %}
+
