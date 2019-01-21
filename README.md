@@ -2,7 +2,8 @@
 
 todo: touch requirements.txt && freeze >> requirements.txt
 
-![Star Wars Site]()
+[![Star Wars Site](https://github.com/elfelround/Django-Swapi/blob/master/screenshot.png)](
+https://youtu.be/Kk3O9iVbz-Q "Star Wars DataBase video interaction")
 
 $ pip install pipenv
 $ pipenv shell
