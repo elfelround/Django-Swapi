@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08761164-7d08-4dbe-9ed6-ff6c594f47d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C-3PO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/character_images/C-3PO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/character_images/Darth-Vader.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starwars/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/starwars/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starwarsapp/static/datatest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starwarsapp/static/stuff.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/people/image-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/starwarsapp/templates/starwarsapp/people/image-create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stuff.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-    </list>
+    <list default="true" id="08761164-7d08-4dbe-9ed6-ff6c594f47d0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
