@@ -64,7 +64,7 @@ class FilmListView(ListView):
 
 def film_list_search(request):
     # vs request.GET["q"]
-    query = request.GET.get("q", None)  # None case no query
+    query = request.GET.get("search", None)  # None case no query
     qs = Film.objects.all()
     if query is not None:
         qs = qs.filter(
