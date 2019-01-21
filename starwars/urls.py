@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 from starwarsapp.views import (
-    PeopleListView, test_view, carrusel, FilmCreateView, FilmListView, FilmDelete,
+    PeopleListView, test_view, Home, FilmCreateView, FilmListView, FilmDelete,
     FilmUpdateView,
+    film_list_search
     )
 from fetcher.views import *
 
@@ -14,7 +15,8 @@ urlpatterns = [
     path('create_film/', FilmCreateView.as_view(), name='film-create'),
     path('<int:pk>/update_film/', FilmUpdateView.as_view(), name='film-update'),
     path('list_film/', FilmListView.as_view(), name='film-list'),
+    path('list_film/', FilmListView.as_view(), name='film-list'),
     path('<int:pk>/delete_film/', FilmDelete.as_view(), name='film-delete'),
-    path('search/', get_data, name='search'),
-    path('', carrusel, name='home'),
+    path('search/', film_list_search, name='search'),
+    path('', Home, name='home'),
 ]

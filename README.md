@@ -1,11 +1,14 @@
 ##On development, end-date next monday
 
+todo: touch requirements.txt && freeze >> requirements.txt
+
 ![Star Wars Site](https://github.com/elfelround/Django-Swapi/blob/master/screenshot.png)
 
 $ pip install pipenv
 $ pipenv shell
 $ pipenv install --requirements
 
+$ python manage.py migrate
 $ python manage.py runserver
 
 http://127.0.0.1:8000

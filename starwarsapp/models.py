@@ -37,6 +37,10 @@ class Planet(DateTimeModel):
         return self.name
 
 
+class PeopleImage(models.Model):
+    image = models.ImageField()
+
+
 class People(DateTimeModel):
     """ A person i.e. - Luke Skywalker """
 
@@ -49,6 +53,7 @@ class People(DateTimeModel):
     birth_year = models.CharField(max_length=10, blank=True)
     gender = models.CharField(max_length=40, blank=True)
     homeworld = models.ForeignKey(Planet, related_name="residents", blank=True, null=True, on_delete=models.CASCADE)
+    image = models.ForeignKey(PeopleImage, null=True, blank=True, related_name='images', on_delete=models.CASCADE)
 
     def __unicode__(self):
         return self.name
@@ -156,8 +161,3 @@ class Film(DateTimeModel):
 class Hero(DateTimeModel):
     name = models.CharField(max_length=100)
     homeworld = models.ForeignKey(Planet, related_name="heroes", on_delete=models.CASCADE)
-
-
-class PropertyImage(models.Model):
-    property = models.ForeignKey(People, null=True, blank=True, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField()

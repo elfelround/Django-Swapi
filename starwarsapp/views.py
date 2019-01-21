@@ -2,8 +2,18 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.utils import timezone
+from django.db.models import Q #complex lookpus
 
-from .models import People
+from .models import (
+    People,
+    Planet,
+    Film,
+    Starship,
+    Vehicle,
+    Species,
+    Hero,
+    PeopleImage,
+)
 
 from django.views.generic import (
     ListView,
@@ -13,7 +23,6 @@ from django.views.generic import (
 )
 
 from .forms import FilmModelForm, SearchForm
-from .models import Film
 
 
 class FilmCreateView(CreateView):
@@ -21,6 +30,7 @@ class FilmCreateView(CreateView):
     form_class = FilmModelForm
     queryset = Film.objects.all()
     success_url = reverse_lazy('home')
+
     def get_absolute_url(self):
         return self.reverse('home')
 
@@ -42,6 +52,27 @@ class FilmListView(ListView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
+
+
+def film_list_search(request):
+    # vs request.GET["q"]
+    query = request.GET.get("q", None)  # None case no query
+    qs = Film.objects.all()
+    if query is not None:
+        qs = qs.filter(
+            Q(title__icontains=query) |
+            Q(opening_crawl__icontains=query) |
+            Q(director__icontains=query) |
+            Q(producer__icontains=query) |
+            Q(release_date__icontains=query)
+            )
+
+        context = {
+            'films': qs,
+        }
+        template = 'starwarsapp/film/list.html'
+        return render(request, template, context)
+
 
 
 class FilmDelete(DeleteView):
@@ -67,7 +98,7 @@ def test_view(request):
     return render(request, "starwarsapp/test.html")
 
 
-def carrusel(request):
+def Home(request):
     return render(request, "starwarsapp/carrusel.html")
 
 
@@ -75,5 +106,3 @@ class PeopleListView(ListView):
     queryset = People.objects.all()
     template_name = 'starwarsapp/people/list.html'
 
-
-# Create your views here.

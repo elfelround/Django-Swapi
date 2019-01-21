@@ -1,7 +1,3 @@
-
-#admin.site.register(People, PropertyAdmin)
-# Register these two together or it will error
-
 from __future__ import unicode_literals
 
 from django.contrib import admin, messages
@@ -14,19 +10,11 @@ from .models import (
     Vehicle,
     Species,
     Hero,
-    PropertyImage,
+    PeopleImage,
 )
 
-#class PropertyImageInline(admin.TabularInline):
-#    model = PropertyImage
-#    extra = 3
 
-
-#class PropertyAdmin(admin.ModelAdmin):
-#    inlines = [PropertyImageInline, ]
-
-
-classes = [People, Planet, Film, Starship, Vehicle, Species, Hero, PropertyImage]
+classes = [People, Planet, Film, Starship, Vehicle, Species, Hero, PeopleImage]
 
 
 class ModelAdmin(admin.ModelAdmin):
@@ -35,6 +23,7 @@ class ModelAdmin(admin.ModelAdmin):
             messages.error(request, "Only superusers can change models")
             return False
         return super(ModelAdmin, self).save_model(request, obj, form, change)
+
 
 for c in classes:
     admin.site.register(c, ModelAdmin)
