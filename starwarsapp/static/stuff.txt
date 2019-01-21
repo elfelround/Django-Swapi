@@ -1,5 +1,0 @@
-  $("#test-button").click(function (e) {
-      e.preventDefault();
-      query = $("#query").val();
-      window.location.href = "https://swapi.co/api/people/?search=" + query;
-      });
