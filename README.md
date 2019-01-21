@@ -4,10 +4,14 @@ Click en la imagen para ver un video interactuando con la web
 https://youtu.be/Kk3O9iVbz-Q "Star Wars DataBase video interaction")
 
 $ pip install pipenv
+
 $ pipenv shell
+
 $ pipenv install --requirements
 
+
 $ python manage.py migrate
+
 $ python manage.py runserver
 
 http://127.0.0.1:8000
