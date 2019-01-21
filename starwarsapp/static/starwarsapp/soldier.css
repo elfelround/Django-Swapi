@@ -3,12 +3,11 @@
   box-sizing: border-box;
 }
 
-
-
 #background-animated-chars {
     position: absolute;
     z-index:-2;
     width:100%;
+    top:20px;
 }
 
 .stripe {
