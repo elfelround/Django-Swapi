@@ -1,6 +1,4 @@
-##On development, end-date next monday
-
-todo: touch requirements.txt && freeze >> requirements.txt
+Click en la imagen para ver un video interactuando con la web
 
 [![Star Wars Site](https://github.com/elfelround/Django-Swapi/blob/master/screenshot.png)](
 https://youtu.be/Kk3O9iVbz-Q "Star Wars DataBase video interaction")
