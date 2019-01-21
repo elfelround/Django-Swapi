@@ -15,7 +15,8 @@ from starwarsapp.views import (
     PeopleListView,
     FilmDelete,
     FilmUpdateView,
-    film_list_search
+    film_list_search,
+    url_logger_view,
     )
 
 urlpatterns = [
@@ -30,5 +31,6 @@ urlpatterns = [
     path('character_list/', PeopleListView.as_view(), name='people-list'),
     path('<int:pk>/delete_film/', FilmDelete.as_view(), name='film-delete'),
     path('search/', film_list_search, name='search'),
+    path('url-log/', url_logger_view, name='url-logger'),
     path('', home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

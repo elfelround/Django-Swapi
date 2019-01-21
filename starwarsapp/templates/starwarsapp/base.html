@@ -46,7 +46,7 @@
       </li>
 
       <li><a href="{% url 'people-image-list' %}">Uploaded Images</a></li>
-
+      <li><a href="{% url 'url-logger' %}">log url</a></li>
       <li><a href="{% url 'admin:index' %}">Admin</a></li>
 
     </ul>
@@ -67,9 +67,6 @@
 </nav>
 
 
-{% include "starwarsapp/searchRecommends/search-recommends.html" %}
-
-
   <div id="content">
     {% block content %}
     {% endblock %}
@@ -78,7 +75,7 @@
 
 <script type="text/javascript" src="{% static "starwarsapp/navbar/externalSearch/index.js" %}"></script>
 
-{% include "starwarsapp/urlLogger/url-logger.html" %}
+<script type="text/javascript" src="{% static "starwarsapp/urlLogger/silenced-url-logger.js" %}"></script>
 
 </body>
 </html>

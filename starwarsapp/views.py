@@ -30,7 +30,11 @@ from .forms import (
 
 
 def home(request):
-    return render(request, "starwarsapp/carrusel.html")
+    return render(request, "starwarsapp/home/home.html")
+
+
+def url_logger_view(request):
+    return render(request, "starwarsapp/urlLogger/url-logger.html")
 
 
 class FilmCreateView(CreateView):

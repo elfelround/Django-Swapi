@@ -1,6 +1,7 @@
+{% extends "starwarsapp/base.html" %}
 {% load static %}
-
-<link rel='stylesheet' href='{% static "starwarsapp/urlLogger/style.css" %}'>
+{% block content %}
+<link rel='stylesheet' href='{% static "starwarsapp/urlLogger/wholepagestyle.css" %}'>
 
 
 <div class="wrapper">
@@ -9,7 +10,7 @@
 
 		<ul id="list" class="urlTabloid">
 			<button type="submit" id="login-button">Return</button>
-			  <button onclick="resetCookie('urls')">CLEAR URLS</button>
+			  <button onclick="resetCookie('urls')">RESET COOKIES</button>
 		</ul>
 	</div>
 
@@ -27,9 +28,10 @@
 	</ul>
 </div>
 
-<script type="text/javascript" src="{% static "starwarsapp/urlLogger/index.js" %}"></script>
+<script type="text/javascript" src="{% static "starwarsapp/urlLogger/wholepageindex.js" %}"></script>
 
 
 <style>
     p {color: black;}
 </style>
+{% endblock %}
