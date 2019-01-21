@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Owl Carousel 2 - Basic</title>
+  <title>{% block title %}{% endblock %}</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
       <a class="navbar-brand" href="#">Star Wars</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="{% url 'home' %}">Home</a></li>
+      <li class="active"><a href="{% url 'home' %}" style="color: white">Home</a></li>
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -35,23 +35,12 @@
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-           role="button" aria-haspopup="true" aria-expanded="false">People <span class="caret"></span></a>
+           role="button" aria-haspopup="true" aria-expanded="false">Characters <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'film-create' %}">Create</a></li>
-          <li><a href="#">List</a></li>
+          <li><a href="{% url 'people-create' %}">Create</a></li>
+          <li><a href="{% url 'people-list' %}">List</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Delete</a></li>
-        </ul>
-      </li>
-
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-           role="button" aria-haspopup="true" aria-expanded="false">Vehicle <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="{% url 'film-create' %}">Create</a></li>
-          <li><a href="#">List</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Delete</a></li>
+          <li><a href="">Delete</a></li>
         </ul>
       </li>
 
@@ -88,8 +77,5 @@
 
 {% include "starwarsapp/urlLogger/url-logger.html" %}
 
-<style>
-    p {color: black;}
-</style>
 </body>
 </html>

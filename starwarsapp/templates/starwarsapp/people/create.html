@@ -1,0 +1,11 @@
+{% extends 'starwarsapp/base.html' %}
+
+{% block content %}
+
+<form action='.' method="POST">{% csrf_token %}
+    {{ form.as_p }}
+     <a href="{% url 'people-image-create' %}">UPLOAD A PICTURE</a>
+    <input type='submit' value="Save" />
+</form>
+
+{% endblock %}

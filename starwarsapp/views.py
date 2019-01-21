@@ -22,7 +22,15 @@ from django.views.generic import (
     UpdateView
 )
 
-from .forms import FilmModelForm, SearchForm
+from .forms import (
+    FilmModelForm,
+    PeopleModelForm,
+    PeopleImageModelForm,
+)
+
+
+def home(request):
+    return render(request, "starwarsapp/carrusel.html")
 
 
 class FilmCreateView(CreateView):
@@ -74,7 +82,6 @@ def film_list_search(request):
         return render(request, template, context)
 
 
-
 class FilmDelete(DeleteView):
     model = Film
     template_name = 'starwarsapp/film/delete.html'
@@ -84,25 +91,33 @@ class FilmDelete(DeleteView):
         # Assuming there is a ForeignKey from Comment to Post in your model
 
 
-def my_view(request):
-    search_form = SearchForm(request.POST or None, initial={'name': 'R2'})
+class PeopleCreateView(CreateView):
+    template_name = "starwarsapp/people/create.html"
+    form_class = PeopleModelForm
+    queryset = People.objects.all()
+    success_url = reverse_lazy('home')
 
-    if request.method == 'POST':
-        if search_form.is_valid():
-           urlquery = 'https://swapi.co/api/people/?search='
-
-    return render(request, 'search-form.html', {'search_form': search_form})
-
-
-def test_view(request):
-    return render(request, "starwarsapp/test.html")
-
-
-def Home(request):
-    return render(request, "starwarsapp/carrusel.html")
+    def get_absolute_url(self):
+        return self.reverse('home')
 
 
 class PeopleListView(ListView):
+    model = People
     queryset = People.objects.all()
+    context_object_name = 'characters'
     template_name = 'starwarsapp/people/list.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+
+
+class PeopleImageCreateView(CreateView):
+    template_name = "starwarsapp/people/image-create.html"
+    form_class = PeopleImageModelForm
+    queryset = PeopleImage.objects.all()
+    success_url = reverse_lazy('home')
+
+    def get_absolute_url(self):
+        return self.reverse('home')

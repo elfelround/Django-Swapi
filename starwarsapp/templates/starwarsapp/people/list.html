@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "starwarsapp/base.html" %}
 
-<p>wolap</p>
+{% block title %}Starwars Characters{% endblock %}
 
-</body>
-</html>
+{% block content %}
+  <h1>Actors List</h1>
+
+<h1>Characters</h1>
+<ul>
+{% for people in people %}
+    <li>{{ people.name }} - {{ people.height }}
+    </li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}

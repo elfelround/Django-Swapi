@@ -1,22 +1,28 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from starwarsapp.views import (
-    PeopleListView, test_view, Home, FilmCreateView, FilmListView, FilmDelete,
+    PeopleListView,
+    home,
+    FilmCreateView,
+    PeopleCreateView,
+    PeopleImageCreateView,
+    FilmListView,
+    PeopleListView,
+    FilmDelete,
     FilmUpdateView,
     film_list_search
     )
-from fetcher.views import *
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('people/', PeopleListView),
-    path('test/', test_view),
     path('create_film/', FilmCreateView.as_view(), name='film-create'),
+    path('create_people/', PeopleCreateView.as_view(), name='people-create'),
+    path('create_people_image/', PeopleImageCreateView.as_view(), name='people-image-create'),
     path('<int:pk>/update_film/', FilmUpdateView.as_view(), name='film-update'),
     path('list_film/', FilmListView.as_view(), name='film-list'),
-    path('list_film/', FilmListView.as_view(), name='film-list'),
+    path('people_film/', PeopleListView.as_view(), name='people-list'),
     path('<int:pk>/delete_film/', FilmDelete.as_view(), name='film-delete'),
     path('search/', film_list_search, name='search'),
-    path('', Home, name='home'),
+    path('', home, name='home'),
 ]

@@ -1,6 +1,10 @@
 from django import forms
 
-from .models import Film
+from .models import (
+    Film,
+    People,
+    PeopleImage,
+)
 
 
 class FilmModelForm(forms.ModelForm):
@@ -9,5 +13,13 @@ class FilmModelForm(forms.ModelForm):
         fields = '__all__'
 
 
-class SearchForm(forms.Form):
-    name = forms.CharField(max_length=20)
+class PeopleModelForm(forms.ModelForm):
+    class Meta:
+        model = People
+        fields = '__all__'
+
+
+class PeopleImageModelForm(forms.ModelForm):
+    class Meta:
+        model = PeopleImage
+        fields = '__all__'
