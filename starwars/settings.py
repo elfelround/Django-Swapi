@@ -128,3 +128,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Physical system path where the static files are stored. Files that are being uploaded by the user.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# URL that your MEDIA files will be accessible through the browser.
+MEDIA_URL = '/media/'

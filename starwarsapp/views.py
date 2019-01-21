@@ -121,3 +121,16 @@ class PeopleImageCreateView(CreateView):
 
     def get_absolute_url(self):
         return self.reverse('home')
+
+
+class PeopleImageListView(ListView):
+    model = PeopleImage
+    queryset = PeopleImage.objects.all()
+    context_object_name = 'images'
+    template_name = 'starwarsapp/people/images-list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+

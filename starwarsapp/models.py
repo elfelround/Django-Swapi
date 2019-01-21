@@ -38,7 +38,7 @@ class Planet(DateTimeModel):
 
 
 class PeopleImage(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(upload_to='character_images')
 
 
 class People(DateTimeModel):
