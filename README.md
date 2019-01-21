@@ -2,7 +2,7 @@
 
 todo: touch requirements.txt && freeze >> requirements.txt
 
-![Star Wars Site](https://github.com/elfelround/Django-Swapi/blob/master/screenshot.png)
+![Star Wars Site]()
 
 $ pip install pipenv
 $ pipenv shell
