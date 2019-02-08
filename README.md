@@ -7,7 +7,7 @@ $ pip install pipenv
 
 $ pipenv shell
 
-$ pipenv install --requirements
+$ pipenv install requirements.txt
 
 
 $ python manage.py migrate
