@@ -19,6 +19,8 @@ $ python manage.py runserver
 
 http://127.0.0.1:8000
 
+*aunque pipenv sea el instalador de paquetes recomendado por Django, puede dar problemas, por eso
+podemos contar con la alternativa de usar venv
 
 ----
 
