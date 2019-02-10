@@ -7,9 +7,9 @@ $ pip install pipenv
 
 $ pipenv shell
 
-$ pipenv install requirements.txt
+$ pipenv install
 
-$cd Django-Swapi
+$ cd Django-Swapi
 
 $ python manage.py migrate
 
