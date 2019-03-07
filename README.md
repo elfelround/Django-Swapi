@@ -1,3 +1,4 @@
+python 3.6
 Click en la imagen para ver un video interactuando con la web
 
 [![Star Wars Site](https://github.com/elfelround/Django-Swapi/blob/master/screenshot.png)](
@@ -29,3 +30,6 @@ Super User:
 
 ![Star Wars](https://i.ytimg.com/vi/usO_6-RuCrg/maxresdefault.jpg)
 
+si se rompe pip 
+
+$ pip install --user --upgrade pip
