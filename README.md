@@ -30,6 +30,14 @@ Super User:
 
 ![Star Wars](https://i.ytimg.com/vi/usO_6-RuCrg/maxresdefault.jpg)
 
+
+es preciso installar python 3.6
+
 si se rompe pip 
 
 $ pip install --user --upgrade pip
+
+dio algunos problemas el pipenv install con whitenoise asi que hice un pip install whitenoise
+tambien instale las dependencias quitando el lock de versiones con 
+
+pipenv install --skip-lock <whatever>
