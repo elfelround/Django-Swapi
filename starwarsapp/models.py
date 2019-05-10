@@ -39,6 +39,7 @@ class Planet(DateTimeModel):
 
 class PeopleImage(models.Model):
     image = models.ImageField(upload_to='character_images')
+    # the fkey in people actually goes here
 
 
 class People(DateTimeModel):
@@ -53,7 +54,9 @@ class People(DateTimeModel):
     birth_year = models.CharField(max_length=10, blank=True)
     gender = models.CharField(max_length=40, blank=True)
     homeworld = models.ForeignKey(Planet, related_name="residents", blank=True, null=True, on_delete=models.CASCADE)
+    
     image = models.ForeignKey(PeopleImage, null=True, blank=True, related_name='images', on_delete=models.CASCADE)
+    # this fkey actually goes in image model
 
     def __unicode__(self):
         return self.name
